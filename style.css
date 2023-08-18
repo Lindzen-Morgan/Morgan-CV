@@ -9,7 +9,7 @@
     background: linear-gradient(to bottom, #9cd6f5, #3498db);
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #333;
     font-family: Arial, sans-serif;
   }
@@ -34,13 +34,28 @@
     padding: 20px;
   }
   
-  /* Style the about section */
+  /* Common styles for titles and content */
+/* ... (your existing styles) ... */
+
+/* Center the "About" section */
 .about {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center; /* Center-align horizontally */
-    flex-direction: column; /* Stack items vertically */
-    margin-bottom: 30px;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+  
+  /* Ensure the "About" section moves under the profile picture on smaller screens */
+  @media (max-width: 767px) {
+    .profile-picture {
+      order: 1;
+    }
+  
+    .about {
+      order: 2;
+    }
   }
   
   .about-content {
@@ -144,22 +159,29 @@
 
 /* Style the expandable sections */
 /* Common styles for titles and content */
+/* Common styles for titles and content */
 .section-title {
     font-weight: bold;
     padding: 10px;
     cursor: pointer;
+    background-color: #f0f0f0;
     transition: background-color 0.3s;
-  }
-  
-  .section-content {
-    display: none;
     border: 1px solid #ccc;
-    border-top: none;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    padding: 10px;
+    margin-bottom: 10px;
   }
+  
+  .section.active .section-title {
+    background-color: #ddd; /* Change to your desired active color */
+  }
+  
+  .section-title:hover {
+    background-color: #e0e0e0; /* Change to your desired hover color */
+  }
+  
+  /* Rest of your existing styles */
+  
   
   /* Styles for larger screens */
   @media (min-width: 768px) {
@@ -214,6 +236,34 @@
       padding: 10px;
     }
   }
+  /* Common styles for titles and content */
+/* ... (your existing styles) ... */
+
+/* Style for the contact section */
+.contact {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .contact h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .contact ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .contact li {
+    margin-bottom: 5px;
+  }
+  
+  /* Rest of your existing styles */
+  
   
   
   
