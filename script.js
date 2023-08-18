@@ -6,20 +6,34 @@ sectionTitles.forEach(title => {
 
   section.addEventListener('click', () => {
     section.classList.toggle('active');
-    content.style.display = section.classList.contains('active') ? 'block' : 'none';
+
+    if (section.classList.contains('active')) {
+      content.style.display = 'block';
+      content.style.opacity = '0'; // Start with 0 opacity
+      setTimeout(() => {
+        content.style.opacity = '1'; // Fade in
+      }, 300);
+    } else {
+      content.style.opacity = '0'; // Fade out
+      setTimeout(() => {
+        content.style.display = 'none';
+      }, 200); // Adjust the delay duration (in milliseconds) as needed
+    }
   });
 
   section.addEventListener('mouseenter', () => {
     if (section.classList.contains('active')) {
       content.style.display = 'block';
+      content.style.opacity = '1'; // Show with full opacity
     }
   });
 
   section.addEventListener('mouseleave', () => {
-    if (section.classList.contains('active')) {
-      content.style.display = 'block';
-    } else {
-      content.style.display = 'none';
+    if (!section.classList.contains('active')) {
+      content.style.opacity = '0'; // Hide with fading out
+      setTimeout(() => {
+        content.style.display = 'none';
+      }, 300); // Adjust the delay duration (in milliseconds) as needed
     }
   });
 });
