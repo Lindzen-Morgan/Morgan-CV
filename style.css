@@ -1,35 +1,224 @@
-body {
-    font-family: Arial, sans-serif;
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: linear-gradient(to bottom, #9cd6f5, #3498db);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header {
-    text-align: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     padding: 20px;
-}
-
-.main-content {
+  }
+  
+  header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  main {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 20px;
-}
-
-.main-content section {
+    padding: 20px;
+  }
+  
+  /* Style the about section */
+.about {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 10px 0;
-}
+    align-items: center;
+    justify-content: center; /* Center-align horizontally */
+    flex-direction: column; /* Stack items vertically */
+    margin-bottom: 30px;
+  }
+  
+  .about-content {
+    text-align: center; 
+    margin-bottom: 20px;
+  }
+  
+  .about h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  .about p {
+    font-size: 16px;
+  }
+  
+  .about-box {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  
+  @media (min-width: 768px) {
+    header {
+      padding: 40px;
+    }
+  
+    header img {
+      width: 150px;
+      height: 150px;
+    }
+  
+    main {
+      flex-direction: row;
+    }
+  
+    .about {
+      flex: 1;
+      text-align: left;
+      margin-bottom: 0;
+      padding-right: 20px;
+    }
+  
+    section {
+      flex: 2;
 
-footer {
-    text-align: center;
-    background-color: #333;
-    color: white;
+  }
+  /* Style the education section */
+.education {
+    margin-bottom: 30px;
+  }
+  
+  .education h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .education p {
+    margin: 5px 0;
+    line-height: 1.4;
+  }
+  
+  .education p strong {
+    font-weight: bold;
+  }
+  /* Style the experience section */
+.experience {
+    margin-bottom: 30px;
+  }
+  
+  .experience h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .experience-item {
+    margin-bottom: 15px;
+  }
+  
+  .experience-item p {
+    margin: 5px 0;
+    line-height: 1.4;
+  }
+  
+  .experience-item p strong {
+    font-weight: bold;
+  }
+  
+  .experience-description {
+    font-size: 16px; 
+  }
+  
+
+/* Style the expandable sections */
+/* Common styles for titles and content */
+.section-title {
+    font-weight: bold;
     padding: 10px;
-    width: 100%;
-}
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .section-content {
+    display: none;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 10px;
+  }
+  
+  /* Styles for larger screens */
+  @media (min-width: 768px) {
+    .section-title {
+      background-color: #f0f0f0;
+    }
+  
+    .section.active .section-title {
+      background-color: #ddd;
+    }
+  
+    .section-title:hover {
+      background-color: #e0e0e0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .section-content {
+      border: 1px solid #ccc;
+      border-top: none;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      padding: 10px;
+    }
+  }
+  
+  /* Styles for smaller screens (e.g., mobile) */
+  @media (max-width: 767px) {
+    .section-title,
+    .section.active .section-title {
+      background-color: #fff; /* Adjust to your desired color for smaller screens */
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .section-title:hover {
+      background-color: #e0e0e0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .section-content {
+      border: 1px solid #ccc;
+      border-top: none;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      padding: 10px;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  }
