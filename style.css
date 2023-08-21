@@ -1,5 +1,9 @@
 /* Reset and common styles */
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,8 +25,8 @@
   }
   
   header img {
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     object-fit: cover;
   }
@@ -125,20 +129,20 @@
     background-color: #e0e0e0; /* Change to desired hover color */
   }
   
-  /* Apply the same styles for section content on larger screens */
+  
   .section-content {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 10px auto; /* Center horizontally and provide vertical spacing */
+    margin: 5px auto; /* Center horizontally and provide vertical spacing */
     max-width: 80%; /* Limit the maximum width of the content box */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center horizontally */
-    text-align: center; /* Center the text */
-    opacity: 0; /* Set initial opacity to 0 */
+    align-items: center; 
+    text-align: center; 
+    opacity: 0; 
     transition: opacity 0.3s, transform 0.3s; /* Apply transition effect to opacity and transform */
     transform-origin: top; /* Set the transform origin to top */
     opacity: 0; /* Initial opacity set to 0 */
@@ -185,5 +189,4 @@
     margin: 5px 0;
     line-height: 1.4;
   }
-  
   

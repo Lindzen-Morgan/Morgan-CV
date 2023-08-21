@@ -17,7 +17,7 @@ sectionTitles.forEach(title => {
       content.style.opacity = '0'; // Fade out
       setTimeout(() => {
         content.style.display = 'none';
-      }, 200); // Adjust the delay duration (in milliseconds) as needed
+      }, 200); // Adjust the delay duration
     }
   });
 
@@ -33,7 +33,7 @@ sectionTitles.forEach(title => {
       content.style.opacity = '0'; // Hide with fading out
       setTimeout(() => {
         content.style.display = 'none';
-      }, 300); // Adjust the delay duration (in milliseconds) as needed
+      }, 300); // Adjust the delay duration
     }
   });
 });
